@@ -1,0 +1,19 @@
+/.idea
+/.ipynb_checkpoints
+/.metals
+/.bloop
+/project
+/target
+/.DS_Store
+/*/.DS_Store
+/*/*/.DS_Store
+*.anno
+*.anno.json
+*.fir
+*.v
+*.xml
+*.v
+*.log
+# Jupyter-scala scripts
+coursier
+almond
