@@ -10,7 +10,7 @@ The code for ScalaBFS using Chisel language is located in src/ directory. Vitis 
 
 This project works on [Xilinx U280 Data Center Accelerator card](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html).
 
-### Workstation
+### Operation System
 
 Ubuntu 18.04 LTS
 
@@ -18,37 +18,27 @@ Ubuntu 18.04 LTS
 
 [Vitis 2020.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2020-1.html)
 
-Need to install platform for U280 version 201920.3.
+[U280 Package File on Vitis 2020.1](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html#gettingStarted)
 
 ### Environment
 
-To compile chisel code, need to install:
+To compile chisel code, you need to install:
 
 - Java 1.0.8
 - sbt 1.4.2
 - Scala 2.12.8
 
-For host part of ScalaBFS, need to install:
 
-- OpenCL
-
-## Usage
-
-### cloning the repository
+## Build 
 
 ```
 $ git clone https://github.com/lizardll/ScalaBFS.git
-```
-
-### build the project
-
-```
 $ make
 ```
 
-It includes decompressing the ScalaBFS-proj folder, compiling chisel code and updating  RTL kernel in Vitis project.
+## Preprocess
 
-### program the project
+## Deploy and play
 
 - Open Vitis
 
