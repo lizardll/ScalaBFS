@@ -44,6 +44,15 @@ $ make
 
 i) Download original graph data which have correct data format
 
+Format: The fist line of graph file contains total vertices and edges of the graph. Then comes graph edges with adjacency list format.
+
+| M[Vertices]    | N[Edges]      |
+| -------------- | ------------- |
+| a1[First node] | b1[Tail node] |
+| a2             | b2            |
+| ...            | ...           |
+| an             | bn            |
+
 ii) Generate Divided Graph Data with Scalable Channels and PEs
 
 Usage: 
@@ -62,7 +71,16 @@ make directed
 
 #### 2) Process Undirected Graph
 
-i) Download original graph data from 
+i) Download original graph data which have correct data format
+
+Format: The fist line of graph file contains total vertices and edges of the graph. Then comes graph edges with adjacency list format.
+
+| M[Vertices]    | N[Edges]      |
+| -------------- | ------------- |
+| a1[First node] | b1[Tail node] |
+| a2             | b2            |
+| ...            | ...           |
+| an             | bn            |
 
 ii) Convert Undirected Graph to Directed Graph
 
