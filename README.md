@@ -46,7 +46,7 @@ We start with a small directed graph named Wiki-Vote for example. First we shoul
 
 ```bash
 cd data_preprocess
-make directed
+make all
 ./GraphToScalaBFS Wiki-Vote.txt 32 64
 ```
 

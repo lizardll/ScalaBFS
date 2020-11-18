@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
     vector<struct edge> graph;
     graph.clear();
     graghfile = argv[1];
-    fp = fopen((const char *)(graghfile+".txt").c_str(), "r");
+    fp = fopen((const char *)(graghfile).c_str(), "r");
     while(!feof(fp)) {
 		// read a data tuple
 		fscanfcount = fscanf(fp, "%u %u", &i, &j);
@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
             }
         }
 	}
-    result = fopen((const char *)(graghfile+"_transfer_to_directed.txt").c_str(),"w");
+    result = fopen((const char *)(graghfile.substr(0,graghfile.find_first_of('.'))+"_transfer_to_directed.txt").c_str(),"w");
     sort(graph.begin(),graph.end(),cmp);
     vector<struct edge>::iterator it;
     for(it = graph.begin();it != graph.end() ; it++){

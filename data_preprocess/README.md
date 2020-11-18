@@ -4,7 +4,7 @@
 
 ### Generate Divided Graph Data with Scalable Channels and PEs
 
-#### 1) Process Directed Graph
+#### 1) Process Undirected Graph
 
 i) Download original graph data which have correct data format
 
@@ -29,7 +29,7 @@ Example:
 
 ```bash
 cd data_preprocess
-make directed
+make all
 ./GraphToScalaBFS soc-livejournal.txt 32 64
 ```
 
@@ -58,14 +58,14 @@ Example:
 
 ```bash
 cd data_preprocess
-make undirected
-./transfer soc-livejournal
+make all
+./transfer soc-livejournal.txt
 ```
 
 iii) Generate Divided Graph Data with Scalable Channels and PEs
 
 ```bash
-./GraphToScalaBFS soc-livejournal.txt 32 64
+./GraphToScalaBFS soc-livejournal_transfer_to_directed.txt 32 64
 ```
 
 ### Well-tested Graph Data Set
