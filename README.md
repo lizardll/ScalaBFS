@@ -16,9 +16,9 @@ Ubuntu 18.04 LTS
 
 ### Software
 
-[Vitis 2020.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2020-1.html)
+[Vitis 2019.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2019-2.html)
 
-[U280 Package File on Vitis 2020.1](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html#gettingStarted)
+[U280 Package File on Vitis 2019.2](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html#gettingStarted)
 
 ### Environment
 

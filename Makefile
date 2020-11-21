@@ -11,30 +11,32 @@ top:
 	python add_init.py
 	
 movev:
-	cp Top.v HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32_ex.srcs/sources_1/imports/bfs_u280/
+	cp Top.v ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32_ex.srcs/sources_1/imports/bfs_u280/
 
 creat_kernel:
-	cd HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/;\
+	cd ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/;\
 	echo "exit" >> bfs_project.tcl
 	vivado -mode tcl -source bfs_project.tcl
 	mv -f FinalBFS_32_ex ../
-	cd ../../../HBMGraph/bfs_u280/
+	cd ../../../
 
 unzip:
-	tar -vzxf HBMGraph-proj.tar.gz -C ../..
+	unzip ScalaBFS-proj.zip
+	rm -rf ScalaBFS-proj.zip
+
 update_kernel:
-	rm -f HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/exports/FinalBFS_32.xo
-	echo "open_project HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32_ex.xpr" > update_kernel.tcl
+	rm -f ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/exports/FinalBFS_32.xo
+	echo "open_project ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32_ex.xpr" > update_kernel.tcl
 	echo "update_compile_order -fileset sources_1" >> update_kernel.tcl
-	echo "source -notrace HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/imports/package_kernel.tcl" >> update_kernel.tcl
-	echo "package_project HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32 mycompany.com kernel FinalBFS_32" >> update_kernel.tcl
-	echo "package_xo  -xo_path HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/exports/FinalBFS_32.xo -kernel_name FinalBFS_32 -ip_directory ../../HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32 -kernel_xml ../../HBMGraph-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/imports/kernel.xml" >> update_kernel.tcl
-	echo "file mkdir /HBMGraph-proj/workspace/FinalBFS_32/src/vitis_rtl_kernel/FinalBFS_32" >> update_kernel.tcl
+	echo "source -notrace ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/imports/package_kernel.tcl" >> update_kernel.tcl
+	echo "package_project ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32 mycompany.com kernel FinalBFS_32" >> update_kernel.tcl
+	echo "package_xo  -xo_path ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/exports/FinalBFS_32.xo -kernel_name FinalBFS_32 -ip_directory ../../ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32 -kernel_xml ../../ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/imports/kernel.xml" >> update_kernel.tcl
+	echo "file mkdir /ScalaBFS-proj/workspace/FinalBFS_32/src/vitis_rtl_kernel/FinalBFS_32" >> update_kernel.tcl
 	echo "exit" >> update_kernel.tcl
 	vivado -mode tcl -source update_kernel.tcl
 
 movecpp:
-	cp -f /space/graph_data/HBMGraph/hostcpp/* HBMGraph-proj/workspace/FinalBFS_32/src/vitis_rtl_kernel/FinalBFS_32/
+	cp -f /space/graph_data/HBMGraph/hostcpp/* ScalaBFS-proj/workspace/FinalBFS_32/src/vitis_rtl_kernel/FinalBFS_32/
 
 testall: testp1 testp2 testp3 testp4 testmem testreq testmaster testres move
 	
