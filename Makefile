@@ -30,8 +30,8 @@ update_kernel:
 	echo "update_compile_order -fileset sources_1" >> update_kernel.tcl
 	echo "source -notrace ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/imports/package_kernel.tcl" >> update_kernel.tcl
 	echo "package_project ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32 mycompany.com kernel FinalBFS_32" >> update_kernel.tcl
-	echo "package_xo  -xo_path ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/exports/FinalBFS_32.xo -kernel_name FinalBFS_32 -ip_directory ../../ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32 -kernel_xml ../../ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/imports/kernel.xml" >> update_kernel.tcl
-	echo "file mkdir /ScalaBFS-proj/workspace/FinalBFS_32/src/vitis_rtl_kernel/FinalBFS_32" >> update_kernel.tcl
+	echo "package_xo  -xo_path ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/exports/FinalBFS_32.xo -kernel_name FinalBFS_32 -ip_directory ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/FinalBFS_32 -kernel_xml ScalaBFS-proj/workspace/FinalBFS_32/vivado_rtl_kernel/FinalBFS_32_ex/imports/kernel.xml" >> update_kernel.tcl
+	echo "file mkdir ScalaBFS-proj/workspace/FinalBFS_32/src/vitis_rtl_kernel/FinalBFS_32" >> update_kernel.tcl
 	echo "exit" >> update_kernel.tcl
 	vivado -mode tcl -source update_kernel.tcl
 
