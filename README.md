@@ -20,6 +20,28 @@ Ubuntu 18.04 LTS
 
 [U280 Package File on Vitis 2019.2](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html#gettingStarted)
 
+Notice:
+
+1. After the installation of xdma and update the shell on alveo card manually(under normal circumstances , the command is shown in the process of the installtion of xdma. If not , you can use command "/opt/xilinx/xrt/bin/xbmgmt flash --update"), you should cold reboot your machine. The cold reboot means that you should shutdown your machine , unplug the power , wating for several minutes , plug the power and boot up your machine.You can use command 
+
+```
+/opt/xilinx/xrt/bin/xbmgmt flash --scan
+/opt/xilinx/xrt/bin/xbutil validate
+```
+
+to make sure that the runtime enviroment and the alveo card is ready.
+
+2. If you meet "PYOPENCL INSTALL FAILED" in the installtion of xrt , refer to [AR# 73055](https://www.xilinx.com/support/answers/73055.html)
+
+3. Don't forget to and the xrt and Vitis to your PATH. Typically you can 
+
+```
+source /opt/xilinx/xrt/setup.sh
+source /tools/Xilinx/Vitis/2019.2/settings64.sh
+```
+
+You can also add this two commands to your .bashrc file.If in the process of making ScalaBFS you fail and see "make: vivado: Command not found", you very likely ignored this step.
+
 ### Environment
 
 To compile chisel code, you need to install:
