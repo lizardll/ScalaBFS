@@ -25,9 +25,29 @@ Ubuntu 18.04 LTS
 To compile chisel code, you need to install:
 
 - Java 1.0.8
-- sbt 1.4.2
-- Scala 2.12.8
 
+```
+sudo apt install openjdk-8-jre-headless
+sudo apt-get install java-wrappers    
+sudo apt-get install default-jdk
+```
+
+- sbt 1.4.2
+
+```
+echo "deb https://dl.bintray.com/sbt/debian /" | \
+sudo tee -a /etc/apt/sources.list.d/sbt.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 \
+--recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+sudo apt-get update
+sudo apt-get install sbt
+```
+
+- Scala 2.11.12
+
+```
+sudo apt install scala
+```
 
 ## Build 
 
