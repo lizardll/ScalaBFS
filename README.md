@@ -31,9 +31,7 @@ Notice:
 
 to make sure that the runtime enviroment and the alveo card is ready.
 
-2. If you meet "PYOPENCL INSTALL FAILED" in the installtion of xrt , refer to [AR# 73055](https://www.xilinx.com/support/answers/73055.html)
-
-3. Don't forget to and the xrt and Vitis to your PATH. Typically you can 
+2. Don't forget to and the xrt and Vitis to your PATH. Typically you can 
 
 ```
 source /opt/xilinx/xrt/setup.sh
@@ -42,6 +40,9 @@ source /tools/Xilinx/Vitis/2019.2/settings64.sh
 
 You can also add this two commands to your .bashrc file.If in the process of making ScalaBFS you fail and see "make: vivado: Command not found", you very likely ignored this step.
 
+3. If you meet "PYOPENCL INSTALL FAILED" in the installtion of xrt , refer to [AR# 73055](https://www.xilinx.com/support/answers/73055.html)
+
+4. If you meet "XRT Requires opencl header" when you open Vitis , refer to [Vitis prompt “XRT Requires opencl header"](https://forums.xilinx.com/t5/Vitis-Acceleration-SDAccel-SDSoC/Vitis-prompt-XRT-Requires-opencl-header-quot/td-p/1087072)
 ### Environment
 
 To compile chisel code, you need to install:
