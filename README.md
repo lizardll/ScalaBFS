@@ -131,6 +131,126 @@ The results will be like this:
 
 ## Experiment results
 
+TABLE 1: Graph datasets
+
+<table>
+<thead>
+  <tr>
+    <th rowspan="2">Graphs</th>
+    <th>Vertices</th>
+    <th>Edges</th>
+    <th>Avg.</th>
+    <th rowspan="2">Directed</th>
+  </tr>
+  <tr>
+    <td>(M)</td>
+    <td>(M)</td>
+    <td>Degree</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>soc-Pokec (PK)</td>
+    <td>1.63</td>
+    <td>30.62</td>
+    <td>18.75</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>soc-LiveJournal (LJ)</td>
+    <td>4.85</td>
+    <td>68.99</td>
+    <td>14.23</td>
+    <td>Y</td>
+  </tr>
+  <tr>
+    <td>com-Orkut (OR)</td>
+    <td>3.07</td>
+    <td>234.37</td>
+    <td>76.28</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>hollywood-2009 (HO)</td>
+    <td>1.14</td>
+    <td>113.89</td>
+    <td>99.91</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT18-8</td>
+    <td>0.26</td>
+    <td>2.05</td>
+    <td>7.81</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT18-16</td>
+    <td>0.26</td>
+    <td>4.03</td>
+    <td>15.39</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT18-32</td>
+    <td>0.26</td>
+    <td>7.88</td>
+    <td>30.06</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT18-64</td>
+    <td>0.26</td>
+    <td>15.22</td>
+    <td>58.07</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT22-16</td>
+    <td>4.19</td>
+    <td>65.97</td>
+    <td>15.73</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT22-32</td>
+    <td>4.19</td>
+    <td>130.49</td>
+    <td>31.11</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT22-64</td>
+    <td>4.19</td>
+    <td>256.62</td>
+    <td>61.18</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT23-16</td>
+    <td>8.39</td>
+    <td>132.38</td>
+    <td>15.78</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT23-32</td>
+    <td>8.39</td>
+    <td>262.33</td>
+    <td>31.27</td>
+    <td>N</td>
+  </tr>
+  <tr>
+    <td>RMAT23-64</td>
+    <td>8.39</td>
+    <td>517.34</td>
+    <td>61.67</td>
+    <td>N</td>
+  </tr>
+</tbody>
+</table>
+
+TABLE 2: Performance comparison between GunRock and ScalaBFS (32-PC/64-PE configuration)
 
 <table>
 <thead>
@@ -178,3 +298,7 @@ The results will be like this:
   </tr>
 </tbody>
 </table>
+
+FIGURE 1: Performances and aggregated bandwidths of ScalaBFS (with 32 HBM PCs and 64 PEs) and baseline case
+
+<img src="https://github.com/lizardll/ScalaBFS/blob/master/docs/fig11-compare-naive.jpg" width="800">
