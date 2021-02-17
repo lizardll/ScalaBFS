@@ -2,7 +2,7 @@
 
 ## Organization
 
-The code for ScalaBFS using Chisel language is located in src/ directory. Vitis project is located in ScalaBFS-proj/ directory after unpacked. Graph data processing files are provied in preprocess/ directory.
+The code for ScalaBFS using Chisel language is located in src/ directory. Vitis project is located in ScalaBFS-proj/ directory after unpacked. Graph data processing files are provided in preprocess/ directory.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Notice:
 
 to make sure that the runtime enviroment and the alveo card is ready.
 
-2. Don't forget to and the xrt and Vitis to your PATH. Typically you can 
+2. Don't forget to add the xrt and Vitis to your PATH. Typically you can 
 
 ```
 source /opt/xilinx/xrt/setup.sh
@@ -72,16 +72,16 @@ sudo apt-get install sbt
 sudo apt install scala
 ```
 
-## Build 
+## Clone and Build 
 
 ```
 $ git clone https://github.com/lizardll/ScalaBFS.git
 $ make
 ```
 
-## Preprocess
+## Quick Start Guide
 
-### Quick Start Guide
+### Preprocess
 
 Before deploying and running ScalaBFS, we need to make sure that you have specific graph data with divided csc-csr format that ScalaBFS required.  For complete graph data preprocess guide, see [Data Preprocess.](https://github.com/lizardll/ScalaBFS/tree/master/data_preprocess)
 
@@ -95,7 +95,7 @@ make all
 
 
 
-## Deploy and play
+### Deploy and play
 
 - Open Vitis
 
@@ -105,5 +105,24 @@ make all
   ScalaBFS-proj/workspace
   ```
 
-- Select graph data
+- Choose graph data (modify host_example.cpp in vitis)
 
+For the preprocessed wiki-vote graph data mentioned before, we should first modify the input file name at line 121:
+
+  ```
+  string bfs_filename = "YOUR_DIR_HERE/ScalaBFS/data_preprocess/Wiki-Vote_pe_64_ch_";
+  ```
+
+Then we have to modify the following line 122-127 according to data_preprocess/Wiki-Vote_addr_pe_64_ch_32.log:
+
+  ```
+    cl_uint csr_c_addr = 260;
+    cl_uint csr_r_addr = 0;
+    cl_uint level_addr = 2958;
+    cl_uint node_num = 8298;
+    cl_uint csc_c_addr = 1780;
+    cl_uint csc_r_addr = 1520;
+  ```
+  
+After that, it's time to build the whole project in vitis. Selecting the "Hardware" target in the left down corner, and then build it! Genarally it will take 10~15 hours.
+  
