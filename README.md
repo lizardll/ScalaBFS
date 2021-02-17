@@ -129,58 +129,50 @@ The results will be like this:
 
 ### Experiment results
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;border-style:solid;border-width:1px;}
-.tg td{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#444;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#fff;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-svo0{background-color:#D2E4FC;border-color:inherit;text-align:center;vertical-align:top}
-</style>
-<table class="tg">
+
+<table>
 <thead>
   <tr>
-    <th class="tg-c3ow"></th>
-    <th class="tg-c3ow" colspan="2">Gunrock on V100</th>
-    <th class="tg-c3ow" colspan="2">ScalaBFS on U280</th>
+    <th></th>
+    <th colspan="2">Gunrock on V100</th>
+    <th colspan="2">ScalaBFS on U280</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-svo0">Datasets</td>
-    <td class="tg-svo0">Throughput<br>(GTEPS)</td>
-    <td class="tg-svo0">Power eff.<br>(GTEPS/watt)</td>
-    <td class="tg-svo0">Throughput<br>(GTEPS)</td>
-    <td class="tg-svo0">Power eff.<br>(GTEPS/watt)</td>
+    <td>Datasets</td>
+    <td>Throughput<br>(GTEPS)</td>
+    <td>Power eff.<br>(GTEPS/watt)</td>
+    <td>Throughput<br>(GTEPS)</td>
+    <td>Power eff.<br>(GTEPS/watt)</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">PK</td>
-    <td class="tg-c3ow">14.9</td>
-    <td class="tg-c3ow">0.050</td>
-    <td class="tg-c3ow">16.2</td>
-    <td class="tg-c3ow">0.506</td>
+    <td>PK</td>
+    <td>14.9</td>
+    <td>0.050</td>
+    <td>16.2</td>
+    <td>0.506</td>
   </tr>
   <tr>
-    <td class="tg-svo0">LJ</td>
-    <td class="tg-svo0">18.5</td>
-    <td class="tg-svo0">0.062</td>
-    <td class="tg-svo0">11.2</td>
-    <td class="tg-svo0">0.350</td>
+    <td>LJ</td>
+    <td>18.5</td>
+    <td>0.062</td>
+    <td>11.2</td>
+    <td>0.350</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">OR</td>
-    <td class="tg-c3ow">150.6</td>
-    <td class="tg-c3ow">0.502</td>
-    <td class="tg-c3ow">19.1</td>
-    <td class="tg-c3ow">0.597</td>
+    <td>OR</td>
+    <td>150.6</td>
+    <td>0.502</td>
+    <td>19.1</td>
+    <td>0.597</td>
   </tr>
   <tr>
-    <td class="tg-svo0">HO</td>
-    <td class="tg-svo0">73</td>
-    <td class="tg-svo0">0.243</td>
-    <td class="tg-svo0">16.4</td>
-    <td class="tg-svo0">0.513</td>
+    <td>HO</td>
+    <td>73</td>
+    <td>0.243</td>
+    <td>16.4</td>
+    <td>0.513</td>
   </tr>
 </tbody>
 </table>
