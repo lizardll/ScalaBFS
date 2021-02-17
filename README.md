@@ -149,28 +149,28 @@ The results will be like this:
     <td>Power eff.<br>(GTEPS/watt)</td>
   </tr>
   <tr>
-    <td>PK</td>
+    <td>soc-Pokec (PK)</td>
     <td>14.9</td>
     <td>0.050</td>
     <td>16.2</td>
     <td>0.506</td>
   </tr>
   <tr>
-    <td>LJ</td>
+    <td>soc-LiveJournal (LJ)</td>
     <td>18.5</td>
     <td>0.062</td>
     <td>11.2</td>
     <td>0.350</td>
   </tr>
   <tr>
-    <td>OR</td>
+    <td>com-Orkut (OR)</td>
     <td>150.6</td>
     <td>0.502</td>
     <td>19.1</td>
     <td>0.597</td>
   </tr>
   <tr>
-    <td>HO</td>
+    <td>hollywood-2009 (HO)</td>
     <td>73</td>
     <td>0.243</td>
     <td>16.4</td>
