@@ -1,5 +1,7 @@
 # ScalaBFS: A Scalable BFS Accelerator on FPGA-HBM Platform
 
+ScalaBFS is an BFS accelerator built on top of an FPGA configured with HBM (i.e., FPGA-HBM platform) which can scale its performance according to the available memory channels (on a single card). It utlizes multiple processing elements to sufficiently exploit the high bandwidth of HBM to improve efficiency. We implement the prototype system of ScalaBFS on Xilinx Alveo U280 FPGA card (real hardware).
+
 ## Organization
 
 The code for ScalaBFS using Chisel language is located in src/ directory. Vitis project is located in ScalaBFS-proj/ directory after unpacked. Graph data processing files are provided in preprocess/ directory.
@@ -127,7 +129,7 @@ After that, it's time to build the whole project in vitis. Select the "Hardware"
 The results will be like this:
 
 
-### Experiment results
+## Experiment results
 
 
 <table>
