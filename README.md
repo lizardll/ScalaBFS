@@ -97,9 +97,7 @@ make all
 
 ### Deploy and play
 
-#### Open Vitis
-
-#### Select workspace:
+#### Open Vitis & Select workspace:
 
   ```
   ScalaBFS-proj/workspace
