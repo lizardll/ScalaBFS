@@ -97,15 +97,15 @@ make all
 
 ### Deploy and play
 
-- Open Vitis
+#### Open Vitis
 
-- Select workspace:
+#### Select workspace:
 
   ```
   ScalaBFS-proj/workspace
   ```
 
-- Choose graph data (modify host_example.cpp in vitis)
+#### Choose graph data (modify host_example.cpp in vitis)
 
 For the preprocessed wiki-vote graph data mentioned before, we should first modify the input file name at line 121:
 
