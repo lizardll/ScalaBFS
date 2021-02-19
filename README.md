@@ -124,10 +124,15 @@ Then we have to modify the following line 122-127 according to data_preprocess/W
     cl_uint csc_r_addr = 1520;
   ```
   
+And in order to show correct prerformance value, on line 132 we also need to set the edge count of the dataset (in this case, wiki-vote has 103689 edges):
+  ```
+  result = 103689;
+  ```
 After that, it's time to build the whole project in vitis. Select the "Hardware" target in the left down corner, and press the hammer button to build it! Genarally it will take 10~15 hours.
 
-The results will be like this:
+The running results will be like this:
 
+<img src="https://github.com/lizardll/ScalaBFS/blob/master/docs/screenshot.png" width="400">
 
 ## Experiment results
 
