@@ -4,7 +4,7 @@ ScalaBFS is an BFS accelerator built on top of an FPGA configured with HBM (i.e.
 
 ## Organization
 
-The code for ScalaBFS using Chisel language is located in src/ directory. Vitis project is located in ScalaBFS-proj/ directory after unpacked. Graph data processing files are provided in preprocess/ directory.
+The code for ScalaBFS using Chisel language is located in src/ directory. Vitis project is located in ScalaBFS-proj/ directory after deployment. Graph data processing files are provided in preprocess/ directory.
 
 ## Prerequisites
 
